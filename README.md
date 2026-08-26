@@ -1,13 +1,10 @@
 # @mylesb/oxlint-config
 
-> Myles' shared [oxlint](https://oxc.rs) configuration for (hopefully) all his
-> projects.
+> Myles' shared [oxlint](https://oxc.rs) configuration for (hopefully) all his projects.
 
-A single source of truth for linting, so every project catches the same
-mistakes without copy-pasting rules around.
+A single source of truth for linting, so every project catches the same mistakes without copy-pasting rules around.
 
-Pairs with [`@mylesb/prettier-config`](https://github.com/myles/prettier-config)
-— oxlint handles correctness, Prettier handles formatting.
+Pairs with [`@mylesb/prettier-config`](https://github.com/myles/prettier-config) — oxlint handles correctness, Prettier handles formatting.
 
 ## Settings
 
@@ -19,11 +16,9 @@ Categories:
 | `suspicious`  | `error` | Code that is most likely wrong or useless.    |
 | `perf`        | `warn`  | Code that could be written more performantly. |
 
-`pedantic`, `restriction`, `style`, and `nursery` stay off — opt into them per
-project when you want the noise.
+`pedantic`, `restriction`, `style`, and `nursery` stay off — opt into them per project when you want the noise.
 
-Plugins: `eslint`, `import`, `node`, `oxc`, `promise`, `typescript`,
-`unicorn`.
+Plugins: `eslint`, `import`, `node`, `oxc`, `promise`, `typescript`, `unicorn`.
 
 Rules on top of the categories:
 
@@ -36,8 +31,7 @@ Rules on top of the categories:
 | `unicorn/prefer-node-protocol` | `error` |
 | `no-console`                   | `warn`  |
 
-Everything else falls back to
-[oxlint's defaults](https://oxc.rs/docs/guide/usage/linter/rules).
+Everything else falls back to [oxlint's defaults](https://oxc.rs/docs/guide/usage/linter/rules).
 
 ## Installation
 
@@ -49,8 +43,7 @@ npm install --save-dev @mylesb/oxlint-config oxlint
 
 ## Usage
 
-oxlint has no concept of ESLint-style shared configs — `extends` takes file
-paths, not package names. Pick whichever of the two below suits the project.
+oxlint has no concept of ESLint-style shared configs — `extends` takes file paths, not package names. Pick whichever of the two below suits the project.
 
 ### Extend it from `.oxlintrc.json`
 
@@ -65,8 +58,7 @@ Point `extends` at the file inside `node_modules`:
 }
 ```
 
-Later entries win, so anything you add alongside `extends` overrides the
-shared config.
+Later entries win, so anything you add alongside `extends` overrides the shared config.
 
 ### Extend it from `oxlint.config.ts`
 
@@ -85,10 +77,7 @@ export default defineConfig({
 });
 ```
 
-> oxlint auto-discovers `.oxlintrc.json`, `oxlint.config.ts`, and
-> `oxlint.config.mts` — but **not** `oxlint.config.js` or `.mjs`. Those need
-> `oxlint -c oxlint.config.js`. TypeScript config files are experimental and
-> only work when oxlint runs under Node.js.
+> oxlint auto-discovers `.oxlintrc.json`, `oxlint.config.ts`, and `oxlint.config.mts` — but **not** `oxlint.config.js` or `.mjs`. Those need `oxlint -c oxlint.config.js`. TypeScript config files are experimental and only work when oxlint runs under Node.js.
 
 ## Linting
 

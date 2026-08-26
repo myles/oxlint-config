@@ -1,0 +1,51 @@
+{
+  "name": "@mylesb/oxlint-config",
+  "version": "1.0.0",
+  "description": "Myles' shared oxlint configuration for (hopefully) all his projects.",
+  "keywords": [
+    "oxlint",
+    "oxlint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:myles/oxlint-config.git"
+  },
+  "license": "MIT",
+  "author": "Myles Braithwaite <myles@myles.garden> (https://myles.garden)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./oxlintrc.json": "./oxlintrc.json",
+    "./package.json": "./package.json"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "oxlintrc.json"
+  ],
+  "scripts": {
+    "oxlint": "oxlint",
+    "oxlint:fix": "oxlint --fix",
+    "prettier": "prettier . -c",
+    "prettier:write": "prettier . --write",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "@mylesb/prettier-config": "1.1.0",
+    "oxlint": "1.80.0",
+    "prettier": "3.9.6"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

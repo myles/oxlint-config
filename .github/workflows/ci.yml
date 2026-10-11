@@ -35,9 +35,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-      - id: prettier-check
-        name: 💅 Run Prettier check
-        run: npm run prettier
+      - id: oxfmt-check
+        name: 💅 Run oxfmt check
+        run: npm run oxfmt
 
       - id: oxlint-check
         name: 🔍 Run oxlint

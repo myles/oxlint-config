@@ -1,6 +1,6 @@
 # @mylesb/oxlint-config
 
-> Myles' shared [oxlint](https://oxc.rs) configuration for (hopefully) all his projects.
+> myles' shared [oxlint](https://oxc.rs) configuration for (hopefully) all his projects.
 
 A single source of truth for linting, so every project catches the same mistakes without copy-pasting rules around.
 
@@ -65,9 +65,8 @@ Later entries win, so anything you add alongside `extends` overrides the shared 
 TypeScript config files get the shared config as an object:
 
 ```ts
-// oxlint.config.ts
-import { defineConfig } from "oxlint";
 import mylesOxlintConfig from "@mylesb/oxlint-config";
+import { defineConfig } from "oxlint";
 
 export default defineConfig({
   extends: [mylesOxlintConfig],
@@ -93,4 +92,4 @@ npx oxlint --fix
 
 ## License
 
-[MIT](./LICENSE) © [Myles Braithwaite](https://myles.garden)
+[MIT](./LICENSE) © [myles braithwaite](https://myles.garden)
